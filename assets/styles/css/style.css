@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
    ========================================================================== */
@@ -426,15 +427,20 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
   .crlab-container.lg {
     max-width: 1068px;
     margin: 6.25rem auto;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-container {
     padding: 2rem 2.5rem;
+  }
+}
+@media (max-width: 360px) {
+  .crlab-container {
+    padding: 2rem 1rem;
   }
 }
 
@@ -463,7 +469,7 @@ body {
   width: 40px;
   height: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-whatsapp-fab {
     right: 20px;
     bottom: -35px;
@@ -475,6 +481,7 @@ body {
   display: block;
   border: 1px solid var(--white);
   color: var(--white);
+  width: 100%;
   max-width: 297px;
   margin: 0 auto;
   padding: 2rem 1.25rem;
@@ -486,10 +493,15 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-button {
     max-width: 100%;
     margin: unset;
+  }
+}
+@media (max-width: 360px) {
+  .crlab-button {
+    font-size: 1rem;
   }
 }
 .crlab-button.outlined {
@@ -499,7 +511,7 @@ body {
   padding: 2rem 1.25rem;
   max-width: 542px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-button.thinner {
     max-width: 100%;
     padding: 1rem 1.25rem;
@@ -513,6 +525,7 @@ body {
 }
 .crlab-button.small {
   padding: 1.5rem 2rem;
+  width: auto;
   font-size: 0.9375rem;
   line-height: 18px;
 }
@@ -532,29 +545,34 @@ body {
   color: var(--white);
 }
 .crlab-heading.lg {
-  font-size: 3.125rem;
-  line-height: 45px;
+  font-size: 5rem;
+  line-height: 100%;
   max-width: 644px;
   width: 100%;
 }
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (max-width: 1120px) {
   .crlab-heading.lg {
-    width: 37%;
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 360px) {
+  .crlab-heading.lg {
+    font-size: 2.5rem;
   }
 }
 .crlab-heading.wrap {
   max-width: 415px;
   margin-bottom: 1.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-heading.wrap {
     max-width: unset;
     margin-bottom: 0.875rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1366px) {
-  .crlab-heading.wrap {
-    width: 67%;
+@media (max-width: 360px) {
+  .crlab-heading {
+    font-size: 2rem;
   }
 }
 
@@ -578,7 +596,7 @@ p.center {
   position: relative;
   color: var(--white);
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   .crlab-banner-container {
     padding: 1.25rem 1.25rem 0;
     height: 805px;
@@ -598,6 +616,14 @@ p.center {
 @media (max-width: 768px) {
   .crlab-banner-container .crlab-fullbanner-background {
     background: linear-gradient(359.47deg, #101010 -5.12%, rgba(16, 16, 16, 0) 104.84%), url("../../images/fullBannerMobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 1120px) {
+  .crlab-banner-container .crlab-fullbanner-background {
+    background-position: center;
+    background-image: linear-gradient(90deg, #101010 -15.78%, rgba(16, 16, 16, 0.3) 100.68%), url("../../images/fullBanner.webp");
   }
 }
 .crlab-banner-container .crlab-cta-wrapper {
@@ -613,19 +639,24 @@ p.center {
   font-size: 1.25rem;
   max-width: 476px;
 }
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
   .crlab-banner-container .crlab-cta-wrapper p {
     width: 37%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 360px) {
+  .crlab-banner-container .crlab-cta-wrapper p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1120px) {
   .crlab-banner-container .crlab-cta-wrapper {
     justify-content: end;
     margin-top: -5.625rem;
     max-width: 82%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
   .crlab-banner-container .crlab-cta-wrapper {
     margin-left: auto;
   }
@@ -665,9 +696,6 @@ header .crlab-mobile-menu-trigger span.bottom {
   bottom: 0;
 }
 header .crlab-mobile-menu-trigger .crlab-mobile-menu {
-  display: none;
-  position: fixed;
-  z-index: 999;
   top: 0;
   right: 0;
   height: 100vh;
@@ -681,7 +709,7 @@ header .crlab-mobile-menu-trigger.open .crlab-mobile-menu {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
   header .crlab-mobile-menu-trigger {
     display: none;
   }
@@ -716,12 +744,12 @@ header nav a:hover {
   opacity: 0.7;
   transition: all 0.2s;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   header nav {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   header {
     width: calc(100% - 2.5rem);
     padding: 1.25rem 1.25rem 0;
@@ -729,10 +757,11 @@ header nav a:hover {
 }
 
 /************************Banner****************************/
+/************************Section 1 - Introdução****************************/
 section#introduction {
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#introduction {
     flex-direction: column;
   }
@@ -741,7 +770,7 @@ section#introduction .crlab-intro-content {
   max-width: 650px;
   margin: auto auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#introduction .crlab-intro-content {
     max-width: unset;
   }
@@ -756,23 +785,33 @@ section#introduction .crlab-intro-image-wrapper {
   display: flex;
   max-width: 750px;
 }
-@media (min-width: 768px) {
+@media (max-width: 1120px) {
+  section#introduction .crlab-intro-image-wrapper {
+    max-width: 100%;
+  }
+  section#introduction .crlab-intro-image-wrapper img {
+    flex: 1;
+  }
+}
+@media (min-width: 1120px) {
   section#introduction .crlab-intro-image-wrapper {
     order: -1;
   }
 }
-@media (min-width: 768px) and (max-width: 1366px) {
+@media (min-width: 1120px) and (max-width: 1366px) {
   section#introduction .crlab-intro-image-wrapper {
     width: 39%;
   }
 }
 
+/************************Section 1 - Introdução****************************/
+/************************Section 2 - Conteúdo****************************/
 section#content {
   margin-top: -1px;
   padding-top: 6.875rem;
   padding-bottom: 6.25rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#content {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
@@ -798,7 +837,7 @@ section#content .crlab-hero .crlab-hero-image-wrapper {
     width: 42%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#content .crlab-hero .crlab-hero-image-wrapper {
     max-width: unset;
     width: auto;
@@ -807,7 +846,7 @@ section#content .crlab-hero .crlab-hero-image-wrapper {
 section#content .crlab-hero.crlbab-hero-image-right .crlab-hero-image-wrapper {
   order: 2;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#content .crlab-hero {
     max-width: unset;
     width: 100%;
@@ -821,15 +860,22 @@ section#content .crlab-hero.crlbab-hero-image-right .crlab-hero-image-wrapper {
 section#content .crlab-content-wrapper {
   flex: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#content .crlab-content-wrapper {
     margin: 1.625rem 0 3.75rem;
   }
 }
 
-@media (max-width: 768px) {
+/************************Section 2 - Conteúdo****************************/
+/************************Section 3 - Contato****************************/
+@media (max-width: 1120px) {
   section#contact.crlab-container {
     padding: 2rem 2.5rem 0;
+  }
+}
+@media (max-width: 1120px) and (max-width: 360px) {
+  section#contact.crlab-container {
+    padding: 2rem 1rem 0;
   }
 }
 section#contact .crlab-cards-wrapper {
@@ -839,7 +885,7 @@ section#contact .crlab-cards-wrapper {
   gap: 2.5rem;
   margin: 4.0625rem 0 6.25rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   section#contact .crlab-cards-wrapper {
     grid-template-columns: repeat(1, 1fr);
     margin: 2rem 0rem 0.75rem;
@@ -869,7 +915,7 @@ section#contact .crlab-heading-wrapper {
   max-width: 542px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#contact .crlab-heading-wrapper {
     max-width: unset;
     margin: unset;
@@ -882,10 +928,10 @@ section#contact form {
   margin: 3.43rem auto;
   max-width: 650px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   section#contact form {
     gap: 1rem;
-    margin: 2rem 0rem 2.5rem;
+    margin: 2rem auto 2.5rem;
   }
 }
 section#contact form input,
@@ -899,6 +945,7 @@ section#contact form textarea::placeholder {
   color: var(--black-0);
 }
 
+/************************Section 3 - Contato****************************/
 footer {
   background-color: var(--black-0);
   color: var(--white);
@@ -907,7 +954,7 @@ footer {
   align-items: center;
   padding: 3.75rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   footer {
     flex-direction: column;
     justify-content: center;
@@ -925,7 +972,7 @@ footer address {
   font-style: italic;
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
   footer address {
     max-width: 312px;
   }

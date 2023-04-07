@@ -7,14 +7,18 @@ body {
 //Container
 .crlab-container {
   &.lg {
-    @media (min-width: 768px) {
+    @media (min-width: 1120px) {
       max-width: 1068px;
       margin: 6.25rem auto;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     padding: 2rem 2.5rem;
+  }
+
+  @media (max-width: 360px) {
+    padding: 2rem 1rem;
   }
 }
 
@@ -50,13 +54,13 @@ body {
     height: 40px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     right: 20px;
     bottom: -35px;
   }
 }
 
-//Estilo botão
+//Botão
 .crlab-button {
   background: var(--black-0);
 
@@ -65,6 +69,7 @@ body {
   border: 1px solid var(--white);
   color: var(--white);
 
+  width: 100%;
   max-width: 297px;
   margin: 0 auto;
 
@@ -78,9 +83,13 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     max-width: 100%;
     margin: unset;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1rem;
   }
 
   &.outlined {
@@ -91,7 +100,7 @@ body {
     padding: 2rem 1.25rem;
     max-width: 542px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: 100%;
       padding: 1rem 1.25rem;
     }
@@ -107,6 +116,7 @@ body {
 
   &.small {
     padding: 1.5rem 2rem;
+    width: auto;
 
     font-size: 0.9375rem;
     line-height: 18px;
@@ -132,14 +142,18 @@ body {
   }
 
   &.lg {
-    font-size: 3.125rem;
-    line-height: 45px;
+    font-size: 5rem;
+    line-height: 100%;
 
     max-width: 644px;
     width: 100%;
 
-    @media (min-width: 768px) and (max-width: 1366px) {
-      width: 37%;
+    @media (max-width: 1120px) {
+      font-size: 3.125rem;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 2.5rem;
     }
   }
 
@@ -147,14 +161,14 @@ body {
     max-width: 415px;
     margin-bottom: 1.5rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: unset;
       margin-bottom: 0.875rem;
     }
+  }
 
-    @media (min-width: 768px) and (max-width: 1366px) {
-      width: 67%;
-    }
+  @media (max-width: 360px) {
+    font-size: 2rem;
   }
 }
 
@@ -180,7 +194,7 @@ p {
 
   color: var(--white);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     padding: 1.25rem 1.25rem 0;
     height: 805px;
   }
@@ -199,6 +213,13 @@ p {
 
     @media (max-width: 768px) {
       background: linear-gradient(359.47deg, #101010 -5.12%, rgba(16, 16, 16, 0) 104.84%), url("../../images/fullBannerMobile.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (max-width: 1120px) {
+      background-position: center;
+      background-image: linear-gradient(90deg, #101010 -15.78%, rgba(16, 16, 16, 0.3) 100.68%), url("../../images/fullBanner.webp");
     }
   }
 
@@ -217,18 +238,22 @@ p {
 
       max-width: 476px;
 
-      @media (min-width: 768px) and (max-width: 1366px) {
+      @media (min-width: 1024px) and (max-width: 1366px) {
         width: 37%;
+      }
+
+      @media (max-width: 360px) {
+        font-size: 1rem;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       justify-content: end;
       margin-top: -5.625rem;
       max-width: 82%;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1120px) {
       margin-left: auto;
     }
   }
@@ -275,10 +300,7 @@ header {
     }
 
     .crlab-mobile-menu {
-      display: none;
 
-      position: fixed;
-      z-index: 999;
       top: 0;
       right: 0;
 
@@ -298,9 +320,7 @@ header {
       }
     }
 
-
-
-    @media (min-width: 768px) {
+    @media (min-width: 1120px) {
       display: none;
     }
   }
@@ -339,35 +359,31 @@ header {
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       display: none;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     width: calc(100% - 2.5rem);
     padding: 1.25rem 1.25rem 0;
   }
 }
-
-
-
 /************************Banner****************************/
 
-//Section 1 - Introdução OK
+/************************Section 1 - Introdução****************************/
 section#introduction {
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     flex-direction: column;
   }
 
   .crlab-intro-content {
-
     max-width: 650px;
     margin: auto auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: unset;
     }
 
@@ -384,23 +400,32 @@ section#introduction {
     display: flex;
     max-width: 750px;
 
-    @media (min-width: 768px) {
+    @media (max-width: 1120px) {
+      max-width: 100%;
+
+      img {
+        flex: 1;
+      }
+    }
+
+    @media (min-width: 1120px) {
       order: -1;
     }
 
-    @media (min-width: 768px) and (max-width: 1366px) {
+    @media (min-width: 1120px) and (max-width: 1366px) {
       width: 39%;
     }
   }
 }
+/************************Section 1 - Introdução****************************/
 
-//Section 2 - Conteúdo OK
+/************************Section 2 - Conteúdo****************************/
 section#content {
   margin-top: -1px;
   padding-top: 6.875rem;
   padding-bottom: 6.25rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
@@ -427,7 +452,7 @@ section#content {
         width: 42%;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 1120px) {
         max-width: unset;
         width: auto;
       }
@@ -439,7 +464,7 @@ section#content {
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: unset;
       width: 100%;
 
@@ -452,25 +477,28 @@ section#content {
         }
       }
     }
-
-
   }
 
   .crlab-content-wrapper {
     flex: 1;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       margin: 1.625rem 0 3.75rem;
     }
   }
 }
+/************************Section 2 - Conteúdo****************************/
 
-//Section 3 - Contato OK
+/************************Section 3 - Contato****************************/
 section#contact {
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     &.crlab-container {
       padding: 2rem 2.5rem 0;
+
+      @media (max-width: 360px) {
+        padding: 2rem 1rem 0;
+      }
     }
   }
 
@@ -483,7 +511,7 @@ section#contact {
     margin: 4.0625rem 0 6.25rem;
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       grid-template-columns: repeat(1, 1fr);
       margin: 2rem 0rem 0.75rem;
     }
@@ -518,12 +546,10 @@ section#contact {
     max-width: 542px;
     margin: 0 auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: unset;
       margin: unset;
     }
-
-    ;
   }
 
   form {
@@ -536,10 +562,10 @@ section#contact {
     max-width: 650px;
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       gap: 1rem;
 
-      margin: 2rem 0rem 2.5rem;
+      margin: 2rem auto 2.5rem;
     }
 
     input,
@@ -554,8 +580,8 @@ section#contact {
     }
   }
 }
+/************************Section 3 - Contato****************************/
 
-//Footer OK
 footer {
   background-color: var(--black-0);
   color: var(--white);
@@ -566,7 +592,7 @@ footer {
 
   padding: 3.75rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1120px) {
     flex-direction: column;
     justify-content: center;
     gap: 1.5rem;
@@ -585,7 +611,7 @@ footer {
     font-style: italic;
     text-align: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1120px) {
       max-width: 312px;
     }
   }
