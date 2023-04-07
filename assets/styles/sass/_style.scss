@@ -6,8 +6,16 @@ body {
 
 //Container
 .crlab-container {
-  //Mobile
-  padding: 2rem 2.5rem;
+  &.lg {
+    @media (min-width: 768px) {
+      max-width: 1068px;
+      margin: 6.25rem auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 2.5rem;
+  }
 }
 
 //Image fluid
@@ -24,8 +32,8 @@ body {
 //Fab Whatsapp
 .crlab-whatsapp-fab {
   position: absolute;
-  right: 20px;
-  bottom: -35px;
+  right: 70px;
+  bottom: 70px;
 
   background-color: var(--black-0);
   border: 0;
@@ -35,9 +43,16 @@ body {
   width: 100px;
   height: 100px;
 
+  line-height: 0;
+
   img {
     width: 40px;
     height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    right: 20px;
+    bottom: -35px;
   }
 }
 
@@ -50,7 +65,9 @@ body {
   border: 1px solid var(--white);
   color: var(--white);
 
-  max-width: 100%;
+  max-width: 297px;
+  margin: 0 auto;
+
   padding: 2rem 1.25rem;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -61,16 +78,38 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: unset;
+  }
+
   &.outlined {
     background-color: transparent;
   }
 
   &.thinner {
-    padding: 1rem 1.25rem;
+    padding: 2rem 1.25rem;
+    max-width: 542px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      padding: 1rem 1.25rem;
+    }
   }
 
   &.w-100 {
     width: 100%;
+  }
+
+  &.left {
+    margin: 0 0;
+  }
+
+  &.small {
+    padding: 1.5rem 2rem;
+
+    font-size: 0.9375rem;
+    line-height: 18px;
   }
 }
 
@@ -80,12 +119,13 @@ body {
   font-size: 2.5rem;
   line-height: 40px;
   font-weight: 400;
+
   margin-top: 0;
   margin-bottom: 0.875rem;
 
-&.center {
-  text-align: center;
-}
+  &.center {
+    text-align: center;
+  }
 
   &.light {
     color: var(--white)
@@ -94,93 +134,244 @@ body {
   &.lg {
     font-size: 3.125rem;
     line-height: 45px;
+
+    max-width: 644px;
+    width: 100%;
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+      width: 37%;
+    }
+  }
+
+  &.wrap {
+    max-width: 415px;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+      max-width: unset;
+      margin-bottom: 0.875rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+      width: 67%;
+    }
   }
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 30px;
   margin: 0;
 
   &.center {
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 /************************Banner****************************/
 .crlab-banner-container {
-  width: calc(100vw - 2.50rem);
-  height: 805px; //Mobile
+  height: 860px;
 
   position: relative;
-  padding: 1.25rem 1.25rem 0;
 
-  background-color: #101010;
   color: var(--white);
+
+  @media (max-width: 768px) {
+    padding: 1.25rem 1.25rem 0;
+    height: 805px;
+  }
+
+  .crlab-fullbanner-background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(90deg, #101010 -15.78%, rgba(16, 16, 16, 0) 100.68%), url("../../images/fullBanner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+      background: linear-gradient(359.47deg, #101010 -5.12%, rgba(16, 16, 16, 0) 104.84%), url("../../images/fullBannerMobile.webp");
+    }
+  }
+
+  .crlab-cta-wrapper {
+    max-width: 89.5%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      margin: 0.875rem 0 2.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+
+      max-width: 476px;
+
+      @media (min-width: 768px) and (max-width: 1366px) {
+        width: 37%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      justify-content: end;
+      margin-top: -5.625rem;
+      max-width: 82%;
+    }
+
+    @media (min-width: 768px) {
+      margin-left: auto;
+    }
+  }
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 7.5rem);
+
+  position: absolute;
+  z-index: 1;
+
+  padding: 2rem 3.75rem 0;
 
   .crlab-logo {
     max-width: 131px;
   }
 
-  .crlab-menu {
+  .crlab-mobile-menu-trigger {
     width: 42px;
     height: 38px;
-    background-color: #fff;
+    position: relative;
+
+    span {
+      display: block;
+      height: 5px;
+      width: 100%;
+      background-color: var(--white);
+      position: absolute;
+
+      &.top {
+        top: 0;
+      }
+
+      &.middle {
+        top: 16.5px
+      }
+
+      &.bottom {
+        bottom: 0;
+      }
+    }
+
+    .crlab-mobile-menu {
+      display: none;
+
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      right: 0;
+
+      height: 100vh;
+      width: 100vw;
+
+      background-color: var(--black-0);
+    }
+
+    &.open {
+      .crlab-mobile-menu {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: var(--white);
+
+    a {
+      text-decoration: none;
+      color: var(--white);
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      font-size: 0.9375rem;
+      line-height: 18px;
+      font-weight: 700;
+
+      &.crlab-button {
+        margin-left: 4.6875rem;
+        margin-right: 3.75rem;
+
+        @media (max-width: 1366px) {
+          margin-left: 3.75rem;
+          margin-right: 2.5rem;
+        }
+      }
+
+      &:hover {
+        opacity: .7;
+        transition: all 0.2s;
+      }
+    }
 
     @media (max-width: 768px) {
       display: none;
     }
   }
-}
 
-// .crlab-fullbanner-background {
-//   // position: absolute;
-//   // z-index: -1;
-//   // top: 0;
-//   // left: 0;
-//   // width: 100%;
-//   // height: 100%;
-
-
-//   // background-image: linear-gradient(90deg, #101010 -15.78%, rgba(16, 16, 16, 0) 100.68%), url("../../images/fullBanner.webp");
-//   // background-size: cover;
-//   // background-repeat: no-repeat;
-// }
-
-.crlab-cta {
-  max-width: 82%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-
-  p {
-    margin: 0.875rem 0 2.5rem;
-    font-weight: 700;
+  @media (max-width: 768px) {
+    width: calc(100% - 2.5rem);
+    padding: 1.25rem 1.25rem 0;
   }
 }
 
+
+
 /************************Banner****************************/
 
+//Section 1 - Introdução OK
 section#introduction {
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .crlab-intro-content {
 
-     p:first-child{
+    max-width: 650px;
+    margin: auto auto;
+
+    @media (max-width: 768px) {
+      max-width: unset;
+    }
+
+    p:first-child {
       margin-bottom: 1.875rem;
     }
 
@@ -191,32 +382,110 @@ section#introduction {
 
   .crlab-intro-image-wrapper {
     display: flex;
+    max-width: 750px;
+
+    @media (min-width: 768px) {
+      order: -1;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+      width: 39%;
+    }
   }
 }
 
-//Section 2 - Conteúdo
+//Section 2 - Conteúdo OK
 section#content {
   margin-top: -1px;
-  padding-top: 3.75rem; 
-  padding-bottom: 3.75rem;
+  padding-top: 6.875rem;
+  padding-bottom: 6.25rem;
+
+  @media (max-width: 768px) {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .crlab-hero {
+    width: 70%;
+    max-width: 1339px;
+
+    display: flex;
+    align-items: center;
+    gap: 11.5%;
+
+    margin: 6.875rem auto;
+
+    &:first-child {
+      margin: 0 auto;
+    }
+
+    .crlab-hero-image-wrapper {
+      max-width: 560px;
+      width: 100%;
+
+      @media (max-width: 1366px) {
+        width: 42%;
+      }
+
+      @media (max-width: 768px) {
+        max-width: unset;
+        width: auto;
+      }
+    }
+
+    &.crlbab-hero-image-right {
+      .crlab-hero-image-wrapper {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      max-width: unset;
+      width: 100%;
+
+      display: block;
+      margin: unset;
+
+      &.crlbab-hero-image-right {
+        .crlab-hero-image-wrapper {
+          order: unset;
+        }
+      }
+    }
+
+
+  }
 
   .crlab-content-wrapper {
-    margin: 1.625rem 0 3.75rem;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      margin: 1.625rem 0 3.75rem;
+    }
   }
 }
 
-//Section 3 - Contato
+//Section 3 - Contato OK
 section#contact {
+
+  @media (max-width: 768px) {
+    &.crlab-container {
+      padding: 2rem 2.5rem 0;
+    }
+  }
+
   .crlab-cards-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 2.5rem;
 
-    margin: 2rem 0rem 0.75rem;
+    margin: 4.0625rem 0 6.25rem;
+
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
+      margin: 2rem 0rem 0.75rem;
     }
 
     .crlab-card {
@@ -245,14 +514,36 @@ section#contact {
     }
   }
 
-  form {
-    margin: 2rem 0rem 2.5rem;
+  .crlab-heading-wrapper {
+    max-width: 542px;
+    margin: 0 auto;
 
+    @media (max-width: 768px) {
+      max-width: unset;
+      margin: unset;
+    }
+
+    ;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 
-    input, textarea {
+    margin: 3.43rem auto;
+
+    max-width: 650px;
+
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+
+      margin: 2rem 0rem 2.5rem;
+    }
+
+    input,
+    textarea {
       border: 1px solid var(--black-0);
       padding: 0.875rem 0.625rem;
       color: var(--black-0);
@@ -264,36 +555,39 @@ section#contact {
   }
 }
 
-//Fotter
+//Footer OK
 footer {
   background-color: var(--black-0);
   color: var(--white);
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
 
-  margin: 10px auto 0;
-
-  // Mobile
   padding: 3.75rem;
 
   @media (max-width: 768px) {
-    padding: 2.5rem 0;
-  }
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
 
-  address {
-    max-width: 312px;
-    font-size: 1.125rem;
-    line-height: 35px;
-    font-style: italic;
-    text-align: center;
+    margin: 10px auto 0;
+    padding: 2.5rem 0;
   }
 
   img {
     max-width: 109px;
+  }
+
+  address {
+    font-size: 1.125rem;
+    line-height: 35px;
+    font-style: italic;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      max-width: 312px;
+    }
   }
 
   .crlab-social {

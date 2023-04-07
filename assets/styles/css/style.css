@@ -7,12 +7,10 @@
  *    IE on Windows Phone and in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
 
 /* Sections
    ========================================================================== */
@@ -20,7 +18,8 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Add the correct display in IE 9-.
@@ -31,7 +30,8 @@ footer,
 header,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -39,7 +39,8 @@ section {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -48,41 +49,41 @@ h1 {
  */
 figcaption,
 figure {
-  display: block; }
+  display: block;
+}
 
 /**
  * Add the correct margin in IE 8.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
 
 /**
  * Add the correct display in IE.
  */
 main {
-  display: block; }
+  display: block;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
 
 /* Links
    ========================================================================== */
@@ -91,10 +92,9 @@ pre {
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -103,26 +103,26 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
 
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 b,
 strong {
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -131,29 +131,31 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
 
 /**
  * Add the correct font style in Android 4.3-.
  */
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Add the correct background and color in IE 9-.
  */
 mark {
   background-color: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -164,13 +166,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -179,26 +184,30 @@ sup {
  */
 audio,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in iOS 4-7.
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Remove the border on images inside links in IE 10-.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /**
  * Hide the overflow in IE.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Forms
    ========================================================================== */
@@ -211,29 +220,27 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
 
 /**
  * Show the overflow in IE.
  */
 button {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
-  text-transform: none; }
+select { /* 1 */
+  text-transform: none;
+}
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -241,88 +248,92 @@ select {
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */ }
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* 2 */
+}
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   /**
    * Remove the inner border and padding in Firefox.
    */
   /**
    * Restore the focus styles unset by the previous rule.
-   */ }
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0; }
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText; }
+   */
+}
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Show the overflow in Edge.
  */
 input {
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
   /**
    * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
-   */ }
-  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; }
+   */
+}
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */ }
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -331,34 +342,29 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  color: inherit;
-  /* 2 */
-  white-space: normal;
-  /* 1 */ }
+  box-sizing: border-box; /* 1 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  color: inherit; /* 2 */
+  white-space: normal; /* 1 */
+}
 
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
 
 /**
  * Remove the default vertical scrollbar in IE.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /* Interactive
    ========================================================================== */
@@ -366,19 +372,22 @@ textarea {
  * Add the correct display in Edge, IE, and Firefox.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /*
  * Add the correct display in IE 9-.
  */
 menu {
-  display: block; }
+  display: block;
+}
 
 /* Scripting
    ========================================================================== */
@@ -386,13 +395,15 @@ menu {
  * Add the correct display in IE 9-.
  */
 canvas {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in IE.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /* Hidden
    ========================================================================== */
@@ -400,48 +411,72 @@ template {
  * Add the correct display in IE 10-.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 :root {
   --white: #FFFFFF;
   --black-0: #000000;
-  --black-14: #141414; }
+  --black-14: #141414;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
-.crlab-container {
-  padding: 2rem 2.5rem; }
+@media (min-width: 768px) {
+  .crlab-container.lg {
+    max-width: 1068px;
+    margin: 6.25rem auto;
+  }
+}
+@media (max-width: 768px) {
+  .crlab-container {
+    padding: 2rem 2.5rem;
+  }
+}
 
 .crlab-responsive-image {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .crlab-bg-dark {
   background-color: var(--black-14);
-  color: var(--white); }
+  color: var(--white);
+}
 
 .crlab-whatsapp-fab {
   position: absolute;
-  right: 20px;
-  bottom: -35px;
+  right: 70px;
+  bottom: 70px;
   background-color: var(--black-0);
   border: 0;
   border-radius: 50%;
   padding: 0;
   width: 100px;
-  height: 100px; }
-  .crlab-whatsapp-fab img {
-    width: 40px;
-    height: 40px; }
+  height: 100px;
+  line-height: 0;
+}
+.crlab-whatsapp-fab img {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 768px) {
+  .crlab-whatsapp-fab {
+    right: 20px;
+    bottom: -35px;
+  }
+}
 
 .crlab-button {
   background: var(--black-0);
   display: block;
   border: 1px solid var(--white);
   color: var(--white);
-  max-width: 100%;
+  max-width: 297px;
+  margin: 0 auto;
   padding: 2rem 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.375rem;
@@ -449,159 +484,465 @@ body {
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none; }
-  .crlab-button.outlined {
-    background-color: transparent; }
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .crlab-button {
+    max-width: 100%;
+    margin: unset;
+  }
+}
+.crlab-button.outlined {
+  background-color: transparent;
+}
+.crlab-button.thinner {
+  padding: 2rem 1.25rem;
+  max-width: 542px;
+}
+@media (max-width: 768px) {
   .crlab-button.thinner {
-    padding: 1rem 1.25rem; }
-  .crlab-button.w-100 {
-    width: 100%; }
+    max-width: 100%;
+    padding: 1rem 1.25rem;
+  }
+}
+.crlab-button.w-100 {
+  width: 100%;
+}
+.crlab-button.left {
+  margin: 0 0;
+}
+.crlab-button.small {
+  padding: 1.5rem 2rem;
+  font-size: 0.9375rem;
+  line-height: 18px;
+}
 
 .crlab-heading {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-size: 2.5rem;
   line-height: 40px;
   font-weight: 400;
   margin-top: 0;
-  margin-bottom: 0.875rem; }
-  .crlab-heading.center {
-    text-align: center; }
-  .crlab-heading.light {
-    color: var(--white); }
+  margin-bottom: 0.875rem;
+}
+.crlab-heading.center {
+  text-align: center;
+}
+.crlab-heading.light {
+  color: var(--white);
+}
+.crlab-heading.lg {
+  font-size: 3.125rem;
+  line-height: 45px;
+  max-width: 644px;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1366px) {
   .crlab-heading.lg {
-    font-size: 3.125rem;
-    line-height: 45px; }
+    width: 37%;
+  }
+}
+.crlab-heading.wrap {
+  max-width: 415px;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .crlab-heading.wrap {
+    max-width: unset;
+    margin-bottom: 0.875rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  .crlab-heading.wrap {
+    width: 67%;
+  }
+}
 
 p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 30px;
-  margin: 0; }
-  p.center {
-    text-align: center; }
+  margin: 0;
+}
+p.center {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+}
 
 /************************Banner****************************/
 .crlab-banner-container {
-  width: calc(100vw - 2.50rem);
-  height: 805px;
+  height: 860px;
   position: relative;
-  padding: 1.25rem 1.25rem 0;
-  background-color: #101010;
-  color: var(--white); }
+  color: var(--white);
+}
+@media (max-width: 768px) {
+  .crlab-banner-container {
+    padding: 1.25rem 1.25rem 0;
+    height: 805px;
+  }
+}
+.crlab-banner-container .crlab-fullbanner-background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #101010 -15.78%, rgba(16, 16, 16, 0) 100.68%), url("../../images/fullBanner.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .crlab-banner-container .crlab-fullbanner-background {
+    background: linear-gradient(359.47deg, #101010 -5.12%, rgba(16, 16, 16, 0) 104.84%), url("../../images/fullBannerMobile.webp");
+  }
+}
+.crlab-banner-container .crlab-cta-wrapper {
+  max-width: 89.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.crlab-banner-container .crlab-cta-wrapper p {
+  margin: 0.875rem 0 2.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  max-width: 476px;
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  .crlab-banner-container .crlab-cta-wrapper p {
+    width: 37%;
+  }
+}
+@media (max-width: 768px) {
+  .crlab-banner-container .crlab-cta-wrapper {
+    justify-content: end;
+    margin-top: -5.625rem;
+    max-width: 82%;
+  }
+}
+@media (min-width: 768px) {
+  .crlab-banner-container .crlab-cta-wrapper {
+    margin-left: auto;
+  }
+}
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; }
-  header .crlab-logo {
-    max-width: 131px; }
-  header .crlab-menu {
-    width: 42px;
-    height: 38px;
-    background-color: #fff; }
-  header nav {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--white); }
-    @media (max-width: 768px) {
-      header nav {
-        display: none; } }
-
-.crlab-cta {
-  max-width: 82%;
-  height: 100%;
+  width: calc(100% - 7.5rem);
+  position: absolute;
+  z-index: 1;
+  padding: 2rem 3.75rem 0;
+}
+header .crlab-logo {
+  max-width: 131px;
+}
+header .crlab-mobile-menu-trigger {
+  width: 42px;
+  height: 38px;
+  position: relative;
+}
+header .crlab-mobile-menu-trigger span {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: var(--white);
+  position: absolute;
+}
+header .crlab-mobile-menu-trigger span.top {
+  top: 0;
+}
+header .crlab-mobile-menu-trigger span.middle {
+  top: 16.5px;
+}
+header .crlab-mobile-menu-trigger span.bottom {
+  bottom: 0;
+}
+header .crlab-mobile-menu-trigger .crlab-mobile-menu {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black-0);
+}
+header .crlab-mobile-menu-trigger.open .crlab-mobile-menu {
   display: flex;
+  gap: 2rem;
   flex-direction: column;
-  justify-content: center; }
-  .crlab-cta p {
-    margin: 0.875rem 0 2.5rem;
-    font-weight: 700; }
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  header .crlab-mobile-menu-trigger {
+    display: none;
+  }
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 18px;
+  font-weight: 700;
+}
+header nav a.crlab-button {
+  margin-left: 4.6875rem;
+  margin-right: 3.75rem;
+}
+@media (max-width: 1366px) {
+  header nav a.crlab-button {
+    margin-left: 3.75rem;
+    margin-right: 2.5rem;
+  }
+}
+header nav a:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    width: calc(100% - 2.5rem);
+    padding: 1.25rem 1.25rem 0;
+  }
+}
 
 /************************Banner****************************/
+section#introduction {
+  display: flex;
+}
+@media (max-width: 768px) {
+  section#introduction {
+    flex-direction: column;
+  }
+}
+section#introduction .crlab-intro-content {
+  max-width: 650px;
+  margin: auto auto;
+}
+@media (max-width: 768px) {
+  section#introduction .crlab-intro-content {
+    max-width: unset;
+  }
+}
 section#introduction .crlab-intro-content p:first-child {
-  margin-bottom: 1.875rem; }
+  margin-bottom: 1.875rem;
+}
 section#introduction .crlab-intro-content a {
-  margin-top: 2.875rem; }
+  margin-top: 2.875rem;
+}
 section#introduction .crlab-intro-image-wrapper {
-  display: flex; }
+  display: flex;
+  max-width: 750px;
+}
+@media (min-width: 768px) {
+  section#introduction .crlab-intro-image-wrapper {
+    order: -1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  section#introduction .crlab-intro-image-wrapper {
+    width: 39%;
+  }
+}
 
 section#content {
   margin-top: -1px;
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem; }
+  padding-top: 6.875rem;
+  padding-bottom: 6.25rem;
+}
+@media (max-width: 768px) {
+  section#content {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}
+section#content .crlab-hero {
+  width: 70%;
+  max-width: 1339px;
+  display: flex;
+  align-items: center;
+  gap: 11.5%;
+  margin: 6.875rem auto;
+}
+section#content .crlab-hero:first-child {
+  margin: 0 auto;
+}
+section#content .crlab-hero .crlab-hero-image-wrapper {
+  max-width: 560px;
+  width: 100%;
+}
+@media (max-width: 1366px) {
+  section#content .crlab-hero .crlab-hero-image-wrapper {
+    width: 42%;
+  }
+}
+@media (max-width: 768px) {
+  section#content .crlab-hero .crlab-hero-image-wrapper {
+    max-width: unset;
+    width: auto;
+  }
+}
+section#content .crlab-hero.crlbab-hero-image-right .crlab-hero-image-wrapper {
+  order: 2;
+}
+@media (max-width: 768px) {
+  section#content .crlab-hero {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin: unset;
+  }
+  section#content .crlab-hero.crlbab-hero-image-right .crlab-hero-image-wrapper {
+    order: unset;
+  }
+}
+section#content .crlab-content-wrapper {
+  flex: 1;
+}
+@media (max-width: 768px) {
   section#content .crlab-content-wrapper {
-    margin: 1.625rem 0 3.75rem; }
+    margin: 1.625rem 0 3.75rem;
+  }
+}
 
+@media (max-width: 768px) {
+  section#contact.crlab-container {
+    padding: 2rem 2.5rem 0;
+  }
+}
 section#contact .crlab-cards-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 2.5rem;
-  margin: 2rem 0rem 0.75rem; }
-  @media (max-width: 768px) {
-    section#contact .crlab-cards-wrapper {
-      grid-template-columns: repeat(1, 1fr); } }
-  section#contact .crlab-cards-wrapper .crlab-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-    width: 100%;
-    padding: 3.125rem 0;
-    border: 1px solid var(--black-0); }
-    section#contact .crlab-cards-wrapper .crlab-card img {
-      width: 75px;
-      height: 75px; }
-    section#contact .crlab-cards-wrapper .crlab-card span {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.1875rem;
-      text-align: center;
-      line-height: 40px; }
-section#contact form {
-  margin: 2rem 0rem 2.5rem;
+  margin: 4.0625rem 0 6.25rem;
+}
+@media (max-width: 768px) {
+  section#contact .crlab-cards-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 0rem 0.75rem;
+  }
+}
+section#contact .crlab-cards-wrapper .crlab-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem; }
-  section#contact form input, section#contact form textarea {
-    border: 1px solid var(--black-0);
-    padding: 0.875rem 0.625rem;
-    color: var(--black-0); }
-    section#contact form input::placeholder, section#contact form textarea::placeholder {
-      color: var(--black-0); }
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  width: 100%;
+  padding: 3.125rem 0;
+  border: 1px solid var(--black-0);
+}
+section#contact .crlab-cards-wrapper .crlab-card img {
+  width: 75px;
+  height: 75px;
+}
+section#contact .crlab-cards-wrapper .crlab-card span {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.1875rem;
+  text-align: center;
+  line-height: 40px;
+}
+section#contact .crlab-heading-wrapper {
+  max-width: 542px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  section#contact .crlab-heading-wrapper {
+    max-width: unset;
+    margin: unset;
+  }
+}
+section#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 3.43rem auto;
+  max-width: 650px;
+}
+@media (max-width: 768px) {
+  section#contact form {
+    gap: 1rem;
+    margin: 2rem 0rem 2.5rem;
+  }
+}
+section#contact form input,
+section#contact form textarea {
+  border: 1px solid var(--black-0);
+  padding: 0.875rem 0.625rem;
+  color: var(--black-0);
+}
+section#contact form input::placeholder,
+section#contact form textarea::placeholder {
+  color: var(--black-0);
+}
 
 footer {
   background-color: var(--black-0);
   color: var(--white);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  margin: 10px auto 0;
-  padding: 3.75rem; }
-  @media (max-width: 768px) {
-    footer {
-      padding: 2.5rem 0; } }
+  padding: 3.75rem;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 10px auto 0;
+    padding: 2.5rem 0;
+  }
+}
+footer img {
+  max-width: 109px;
+}
+footer address {
+  font-size: 1.125rem;
+  line-height: 35px;
+  font-style: italic;
+  text-align: center;
+}
+@media (max-width: 768px) {
   footer address {
     max-width: 312px;
-    font-size: 1.125rem;
-    line-height: 35px;
-    font-style: italic;
-    text-align: center; }
-  footer img {
-    max-width: 109px; }
-  footer .crlab-social {
-    display: flex;
-    gap: 1.25rem;
-    align-items: center; }
-    footer .crlab-social .crlab-social-item {
-      width: 33px;
-      height: 33px;
-      text-decoration: none;
-      cursor: pointer; }
-      footer .crlab-social .crlab-social-item img {
-        width: 100%; }
+  }
+}
+footer .crlab-social {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+footer .crlab-social .crlab-social-item {
+  width: 33px;
+  height: 33px;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer .crlab-social .crlab-social-item img {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
