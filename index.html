@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <link rel="stylesheet" href="assets/styles/css/style.css">
-  <title>Landing Page</title>
+  <title>Técnica FUE - CRLaB</title>
 </head>
 
 <body>
   <header>
-    <img src="assets/images/crlab.svg" alt="CRLAB" class="crlab-logo">
+    <a class="crlab-logo" href="https://br.crlab.com/" tabindex="0">
+      <img src="assets/images/crlab.svg" alt="CRLAB" class="crlab-responsive-image">
+    </a>
 
     <!-- Desktop Menu -->
     <nav>
-      <a href="">O procedimento</a>
-      <a href="">A CRLAB</a>
-      <a href="" class="crlab-button outlined small">Agende uma consulta</a>
-      <a href="">
+      <a href="#procedimento" tabindex="0">O procedimento</a>
+      <a href="#introduction" tabindex="0">A CRLAB</a>
+      <a href="#contact" class="crlab-button outlined small" tabindex="0">Agende uma consulta</a>
+      <a href="https://api.whatsapp.com/send?phone=5511995860584&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20:)"
+        target="_blank" tabindex="0">
         <img src="assets/images/whatsapp.svg" alt="">
         11 99586.0584
       </a>
@@ -29,53 +44,57 @@
     <!-- Desktop -->
 
     <!-- Mobile Menu -->
-    <div id="menu-trigger" class="crlab-mobile-menu-trigger" onclick="toggleMobileMenu(this)">
+    <div id="menu-trigger" class="crlab-mobile-menu-trigger" onclick="openSidenav()">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
+    </div>
 
-      <nav class="crlab-mobile-menu">
-        <a href="">O procedimento</a>
-        <a href="">A CRLAB</a>
-        <a href="" class="crlab-button outlined small">Agende uma consulta</a>
-        <a href="">
+    <div id="sidenav" class="crlab-mobile-menu">
+      <div class="nav-links-wrapper">
+        <a href="javascript:void(0)" class="crlab-close-menu-button" onclick="closeSidenav()">&times;</a>
+        <a href="#procedimento" onclick="closeSidenav()">O procedimento</a>
+        <a href="#introduction" onclick="closeSidenav()">A CRLAB</a>
+        <a href="https://api.whatsapp.com/send?phone=5511995860584&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20:)"
+          target="_blank" onclick="closeSidenav()">
           <img src="assets/images/whatsapp.svg" alt="">
           11 99586.0584
         </a>
-
-      </nav>
+      </div>
+      <a href="#contact" class="crlab-button outlined small" onclick="closeSidenav()">Agende uma consulta</a>
     </div>
-    <!--Mobile  -->
 
+    <div class="crlab-overlay"></div>
+    <!--Mobile  -->
   </header>
 
-  <!-- Banner -->
-  <div class="crlab-banner-container">
-    <div class="crlab-fullbanner-background"></div>
-
-    <div class="crlab-cta-wrapper">
-      <h1 class="crlab-heading lg">Tenha o cabelo dos seus sonhos com a técnica FUE</h1>
-      <p>A solução definitiva para a calvície com atendimento especializado e resultados naturais</p>
-      <a href="#" class="crlab-button outlined w-100 left">Conheça!</a>
-    </div>
-
-    <button class="crlab-whatsapp-fab">
-      <img src="assets/images/whatsapp.svg" alt="">
-    </button>
-  </div>
-  <!-- Banner -->
-
   <main>
+    <!-- Banner -->
+    <div class="crlab-banner-container">
+      <div class="crlab-fullbanner-background"></div>
+
+      <div class="crlab-cta-wrapper">
+        <h1 class="crlab-heading lg">Tenha o cabelo dos seus sonhos com a técnica FUE</h1>
+        <p>A solução definitiva para a calvície com atendimento especializado e resultados naturais</p>
+        <a href="#introduction" class="crlab-button outlined w-100 left">Conheça!</a>
+      </div>
+
+      <button class="crlab-whatsapp-fab" title="Fale conosco via WhatsApp" tabindex="0">
+        <img src="assets/images/whatsapp.svg" alt="">
+      </button>
+    </div>
+    <!-- Banner -->
+
     <!-- Section 1 -->
     <section id="introduction">
       <div class="crlab-container crlab-intro-content">
-        <p>
+        <p data-aos="fade-up">
           Se você sofre com a queda de cabelo ou calvície, sabe como isso pode afetar sua autoestima e bem-estar.
           <strong>Mas a
             boa notícia é que a CRLAB tem a solução ideal para você:</strong> a técnica FUE!
         </p>
 
-        <p>
+        <p data-aos="fade-up">
           Nós somos referência em transplante capilar no Brasil e em todo o mundo, com mais de 50 anos de experiência na
           área médica e mais de 1 milhão de pacientes atendidos. Com a técnica FUE, <strong>garantimos resultados
             naturais
@@ -83,10 +102,10 @@
             duradouros</strong>, preenchendo toda a área calva de forma homogênea e sem deixar cicatrizes.
         </p>
 
-        <a href="" class="crlab-button left">Saiba Mais</a>
+        <a href="#content" class="crlab-button" data-aos="fade-up">Saiba Mais</a>
       </div>
 
-      <div class="crlab-intro-image-wrapper">
+      <div class="crlab-intro-image-wrapper" data-aos="fade-up">
         <img src="assets/images/1.jpg" alt="" class="crlab-responsive-image">
       </div>
     </section>
@@ -95,13 +114,13 @@
     <!-- Section 2 -->
     <section id="content" class="crlab-bg-dark crlab-container">
       <div class="crlab-hero crlbab-hero-image-right">
-        <div class="crlab-hero-image-wrapper">
+        <div class="crlab-hero-image-wrapper" data-aos="fade-up">
           <img src="assets/images/2.png" alt="" class="crlab-responsive-image">
         </div>
 
         <div class="crlab-content-wrapper">
-          <h2 class="crlab-heading wrap">Como funciona a técnica FUE</h2>
-          <p>
+          <h2 class="crlab-heading wrap" data-aos="fade-up">Como funciona a técnica FUE</h2>
+          <p data-aos="fade-up">
             <strong>A técnica FUE</strong>, ou Follicular Unit Extraction, consiste na extração de folículos capilares
             da
             área doadora, que
@@ -115,13 +134,13 @@
       </div>
 
       <div class="crlab-hero">
-        <div class="crlab-hero-image-wrapper">
+        <div class="crlab-hero-image-wrapper" data-aos="fade-up">
           <img src="assets/images/3.png" alt="" class="crlab-responsive-image">
         </div>
 
         <div class="crlab-content-wrapper">
-          <h2 class="crlab-heading wrap">Consulta e análise prévia</h2>
-          <p>
+          <h2 class="crlab-heading wrap" data-aos="fade-up">Consulta e análise prévia</h2>
+          <p data-aos="fade-up">
             Antes de dar seguimento ao procedimento, é realizada uma consulta com o paciente, para avaliar a qualidade
             dos
             folículos e definir a Hair Line, garantindo um resultado estético natural e harmonioso. Nossos médicos
@@ -133,13 +152,13 @@
       </div>
 
       <div class="crlab-hero crlbab-hero-image-right">
-        <div class="crlab-hero-image-wrapper">
+        <div class="crlab-hero-image-wrapper" data-aos="fade-up">
           <img src="assets/images/4.png" alt="" class="crlab-responsive-image">
         </div>
 
-        <div class="crlab-content-wrapper">
-          <h2 class="crlab-heading wrap">O procedimento</h2>
-          <p>
+        <div id="procedimento" class="crlab-content-wrapper">
+          <h2 class="crlab-heading wrap" data-aos="fade-up">O procedimento</h2>
+          <p data-aos="fade-up">
             A cirurgia é realizada em um centro cirúrgico, com anestesia local e sedação via oral, o que <strong>garante
               o
               conforto e segurança do paciente durante todo o processo.</strong> A duração é de 8 a 10 horas, com pausas
@@ -156,20 +175,20 @@
       </div>
 
       <div class="crlab-hero">
-        <div class="crlab-hero-image-wrapper">
+        <div class="crlab-hero-image-wrapper" data-aos="fade-up">
           <img src="assets/images/5.png" alt="" class="crlab-responsive-image">
         </div>
 
         <div class="crlab-content-wrapper">
-          <h2 class="crlab-heading wrap">Resultados</h2>
-          <p>
+          <h2 class="crlab-heading wrap" data-aos="fade-up">Resultados</h2>
+          <p data-aos="fade-up">
             Os primeiros resultados podem ser percebidos em 3 meses após a cirurgia, com 50% em 6 meses e resultado
             completo em até um ano.
           </p>
         </div>
       </div>
 
-      <a href="" class="crlab-button outlined thinner">
+      <a href="#contact" class="crlab-button outlined thinner" data-aos="fade-up">
         Entre em contato para saber mais
       </a>
     </section>
@@ -177,65 +196,76 @@
 
     <!-- Section 3 -->
     <section id="contact" class="crlab-container lg">
-      <h3 class="crlab-heading center">Atendimento CRLAB</h3>
-      <p class="center">
+      <h3 class="crlab-heading center" data-aos="fade-up">Atendimento CRLAB</h3>
+      <p class="center" data-aos="fade-up">
         A CRLAB é referência em tratamentos preventivos e soluções definitivas para a calvície, com mais de 50 anos de
         experiência no segmento. Oferecemos um atendimento personalizado e completo, desde a primeira consulta até o
         acompanhamento pós-operatório, com uma equipe médica preparada para fornecer todo o suporte necessário.
       </p>
 
       <div class="crlab-cards-wrapper">
-        <div class="crlab-card">
+        <div class="crlab-card" data-aos="fade-up">
           <img src="assets/images/location.svg" alt="">
           <span>+ 200 <br> clínicas</span>
         </div>
 
-        <div class="crlab-card">
+        <div class="crlab-card" data-aos="fade-up">
           <img src="assets/images/user.svg" alt="">
           <span>+ 1 mi de <br> pacientes</span>
         </div>
 
-        <div class="crlab-card">
+        <div class="crlab-card" data-aos="fade-up">
           <img src="assets/images/icon.svg" alt="">
           <span>Qualidade internacional</span>
         </div>
       </div>
 
       <div class="crlab-heading-wrapper">
-        <h4 class="crlab-heading center">Contato</h4>
-        <p class="center">Preencha o formulário com seus melhores canais de contato para que possamos agendar uma
+        <h3 class="crlab-heading center" data-aos="fade-up">Contato</h3>
+        <p class="center" data-aos="fade-up">Preencha o formulário com seus melhores canais de contato para que possamos
+          agendar uma
           consulta!</p>
       </div>
 
-      <form>
+      <form data-aos="fade-up">
         <input type="text" name="name" id="crlabInputName" placeholder="Nome">
         <input type="tel" name="phone" id="crlabInputPhone" placeholder="Telefone">
         <textarea name="message" id="crlabMessage" cols="30" rows="10" placeholder="Mensagem"></textarea>
-        <button type="submit" class="crlab-button">Enviar</button>
+        <button type="submit" class="crlab-button w-100">Enviar</button>
       </form>
     </section>
     <!-- Section 3 -->
   </main>
+  
   <footer>
-    <img src="assets/images/crlab.svg" alt="CRLAB">
+    <a class="crlab-logo" href="https://br.crlab.com/">
+      <img src="assets/images/crlab.svg" alt="CRLAB" class="crlab-responsive-image">
+    </a>
+
     <address>
-      Rua Samuel Morse nº 134 - CJ 72, Brooklyn - São Paulo – SP, Brasil
+      <a href="https://goo.gl/maps/DBnsnd78GqoMHoa97" target="_blank">
+        Rua Samuel Morse nº 134 - CJ 72, Brooklyn - São Paulo – SP, Brasil
+      </a>
     </address>
 
     <div class="crlab-social">
-      <a href="" class="crlab-social-item">
+      <a href="https://www.facebook.com/crlabsp" class="crlab-social-item" target="_blank" title="Facebook CRLAB">
         <img src="assets/images/facebook.svg" alt="">
       </a>
-      <a href="" class="crlab-social-item">
+      <a href="https://www.instagram.com/crlabsaopaulo/" class="crlab-social-item" target="_blank"
+        title="Instagram CRLAB">
         <img src="assets/images/instagram.svg" alt="">
       </a>
-      <a href="" class="crlab-social-item">
+      <a href="https://api.whatsapp.com/send?phone=5511995860584&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20:)"
+        class="crlab-social-item" target="_blank" title="WhatsApp CRLAB">
         <img src="assets/images/whatsapp.svg" alt="">
       </a>
     </div>
   </footer>
 
   <script src="assets/scripts/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="assets/scripts/aos.js"></script>
 </body>
 
 </html>
